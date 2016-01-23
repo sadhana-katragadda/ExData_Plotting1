@@ -1,3 +1,5 @@
+## Generates a plot with timestamp on x-axis and global active power on y-axis and saves it plot2.png
+
 plot2 <- function(file) {
   power <- read.table(file, header=T, sep=";")
   power$Date <- as.Date(power$Date, format="%d/%m/%Y")

@@ -1,3 +1,9 @@
+##the two days of interest are subsetted out of the power data frame and assigned to new data frame named "df"
+## the Sub_metering,Voltage, Global_active_power, and Global_reactive_power cols are reformatted as numeric vectors
+## a new column titled "timestamp" is added to df. This column consists of the date and time pasted together and reformatted as a POSIXct class.
+## Plot Layout is changed from (1,1) to (2,2) using the par command. 
+## Plots are generated.
+
 plot4 <- function(file) {
   power <- read.table(file, header=T, sep=";")
   power$Date <- as.Date(power$Date, format="%d/%m/%Y")

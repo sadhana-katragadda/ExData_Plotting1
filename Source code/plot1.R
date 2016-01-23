@@ -1,3 +1,6 @@
+## Plot1 generates a histogram for Global Active Power and saves it plot1.png
+
+
 plot1<- function(file) {
   power <- read.table(file, header=T, sep=";")
   power$Date <- as.Date(power$Date, format="%d/%m/%Y")
